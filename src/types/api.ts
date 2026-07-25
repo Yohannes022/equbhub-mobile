@@ -1,19 +1,13 @@
 /**
  * ============================================================
- * Notification Model
+ * Generic API Response
  * ============================================================
  */
 
-export interface Notification {
-	id: string;
-
-	userId: string;
-
-	title: string;
+export interface ApiResponse<T> {
+	success: boolean;
 
 	message: string;
 
-	read: boolean;
-
-	createdAt: string;
+	data?: T;
 }
